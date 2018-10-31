@@ -1,0 +1,25 @@
+extends layout
+
+block content
+ h1 #{title}
+ if failuremsg
+  h3(style=" color: red") #{failuremsg}
+ form(method='post',action='/auth/cognito')
+   #form-group
+     label Username:
+     input.form-control(name='username',type='email')
+   #form-group
+     label Password:
+     input.form-control(name='password',type='password')
+   if newpassword
+     #form-group
+       label Name:
+       input.form-control(name='name',type='text')
+     #form-group
+       label New Password:
+       input.form-control(name='newpassword',type='password')
+     #form-group
+       label Confirm New Password:
+       input.form-control(name='confirmNewPassword',type='password')
+   br
+   input.btn.btn-primary(type='submit',value='Submit')

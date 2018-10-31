@@ -1,0 +1,17 @@
+extends layout
+
+block content
+ h1 #{title}
+ form(method='post',action='/media/add')
+   #form-group
+     label Name:
+     input.form-control(name='name',type='text', required=true)
+   #form-group
+     label Artist(s):
+     input.form-control(name='artist',type='text')
+   #form-group
+     label Location:
+     input.form-control(name='location',type='text', required=true)
+   br
+   input.btn.btn-primary(type='submit',value='Save')
+   a.btn.btn-default(href='/') Discard

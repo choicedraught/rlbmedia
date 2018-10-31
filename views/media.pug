@@ -1,0 +1,17 @@
+extends layout
+
+block content
+ h3 #{title} 
+ h1= mediaitem.medianame
+ h4 Featuring: #{ mediaitem.mediaartist }
+ h4 Located at: #{ mediaitem.medialocation }
+ a.btn.btn-default(href='/media/edit/'+mediaitem.media_id) Edit  
+ a.btn.btn-danger.delete-article(href='#',data-id=mediaitem.media_id) Delete
+ p 
+ a.btn.btn-default(href='/search?lastsearch=true') Back to results 
+ // p= mediaitem.medialocation 
+ //- hr
+ //- if user 
+ //-   if user.id == article.author
+ //-     a.btn.btn-default(href='/articles/edit/'+article._id) Edit  
+ //-     a.btn.btn-danger.delete-article(href='#',data-id=article._id) Delete

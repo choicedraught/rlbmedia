@@ -1,0 +1,6 @@
+# Ignore the node_modules dir
+node_modules/*
+
+# Ignore my rooting around files
+test.js
+test2.js

@@ -1,0 +1,22 @@
+extends layout
+
+block content
+ h1 #{title}
+ //- ul.list-group
+ //-  each media, i in mediaitems
+ //-   li.list-group-item
+ //-     a(href='/media/'+media.media_id)= media.medianame
+ //-       h4 #{ media.location }
+ // table.table-bordered
+ table.table
+  th Media Name
+  th Media Location
+     each media, f in mediaitems
+       tr
+         td
+           a(href='/media/'+media.media_id)=  media.medianame
+         td= media.medialocation
+         //- td= article.author
+         //- td
+         //-   a(href='/articles/delete/'+article._id)= "Delete"
+       

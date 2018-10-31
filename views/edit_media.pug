@@ -1,0 +1,21 @@
+extends layout
+
+block content
+ h1 #{title}
+ form(method='post',action='/media/edit/'+media.media_id)
+   #form-group
+     input.form-control(name='id',type='hidden', value=media.media_id, readonly)
+   #form-group
+     label Name:
+     input.form-control(name='name',type='text', value=media.medianame)
+   #form-group
+     label Artist(s):
+     input.form-control(name='artist',type='text', value=media.mediaartist)
+   #form-group
+     label Location:
+     input.form-control(name='location',type='text', value=media.medialocation)
+   #form-group
+     input.form-control(name='searchterms',type='hidden', value=media.searchterms, readonly)
+   br
+   input.btn.btn-primary(type='submit',value='Save')
+   a.btn.btn-default(href='/media/'+media.media_id) Discard

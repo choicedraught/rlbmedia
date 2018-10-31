@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1 #{title}
+  form(method='get',action='/search')
+   #form-group
+     label Search:
+     input.form-control(name='keywords',type='search', id='searchfield', placeholder='What would you like to search for?')
+   br
+   input.btn.btn-primary(type='submit',value='Submit')
+   script(srv='/public/js/edit.js', type='text/javascript')

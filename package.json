@@ -1,0 +1,26 @@
+{
+  "name": "rlbmedia",
+  "version": "1.0.0",
+  "description": "RLB Media Database",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.338.0",
+    "body-parser": "*",
+    "bower": "^1.8.4",
+    "connect-flash": "^0.1.1",
+    "dynamoose": "^1.0.1",
+    "express": "*",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.3.0",
+    "passport": "^0.4.0",
+    "passport-cognito": "^0.1.13",
+    "pug": "^2.0.3"
+  },
+  "author": "Jack Bryant",
+  "license": "ISC",
+  "devDependencies": {}
+}
